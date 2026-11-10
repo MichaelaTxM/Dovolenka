@@ -9,6 +9,15 @@
     --biela: hsla(0, 0%, 100%, 0.78)
 }
 
+header {
+    background-color: var(--biela)
+}
+
 .Logo {
     font-family: 'Merriweather', sans-serif;
+    color: var(--hlbka);
+}
+
+h2{
+    color: var(--hlbka);
 }
