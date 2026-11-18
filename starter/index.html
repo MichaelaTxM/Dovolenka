@@ -1,86 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/normalize.css"> 
+    <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Dovolenka</title>
+    <title>Svetobežník | Dovolenka podľa vašich predstáv</title>
 </head>
 <body>
+    <header class="hlavicka" id="domov">
+        <a class="hlavicka__logo" href="#domov">Svetobežník</a>
 
-    <header>
-        <div class="Logo">Svetobežník</div>
-
-        <nav>
-            <ul>
-                <li><a href="#">Domov</a></li>
-                <li><a href="#">Destinácie</a></li>
-                <li><a href="#">Kontakt</a></li>
+        <nav class="navigacia" aria-label="Hlavná navigácia">
+            <ul class="navigacia__zoznam">
+                <li><a href="#domov">Domov</a></li>
+                <li><a href="#destinacie">Destinácie</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
             </ul>
         </nav>
 
-        <button>Rezervovať</button>
-        
+        <a class="tlacidlo" href="#kontakt">Rezervovať</a>
     </header>
 
     <main>
-        <section class="Miesta">
-            Objav miesta, o ktorých snívaš
-            <p>Zájazdy na mieru pre rodiny, páry aj partie kamarátov. Postaráme sa o všetko okrem kufra.</p>
+        <section class="uvod" aria-labelledby="uvod-nadpis">
+            <div class="uvod__obsah">
+                <h1 id="uvod-nadpis">Objav miesta, o ktorých snívaš</h1>
+                <p>Zájazdy na mieru pre rodiny, páry aj partie kamarátov. Postaráme sa o všetko okrem kufra.</p>
+            </div>
         </section>
 
-        <section class="Info">
-            15
-            rokov skúseností
-
-            2 000
-            spokojných klientov
-
-            40
-            krajín
+        <section class="statistiky" aria-label="Naše skúsenosti">
+            <div class="statistiky__polozka">
+                <strong>15</strong>
+                <span>rokov skúseností</span>
+            </div>
+            <div class="statistiky__polozka">
+                <strong>2 000</strong>
+                <span>spokojných klientov</span>
+            </div>
+            <div class="statistiky__polozka">
+                <strong>40</strong>
+                <span>krajín</span>
+            </div>
         </section>
 
-        <section class="Krajiny">
-            <h2>Chorvátsko</h2>
-            
-            <p>Čistá voda, kamenné mestečká a krátka cesta autom. Dovolenka bez stresu.</p>
+        <section class="destinacie" id="destinacie" aria-label="Obľúbené destinácie">
+            <article class="destinacia">
+                <img
+                    class="destinacia__obrazok"
+                    src="assets/images/spencer-davis-fWtJvFqyUQQ-unsplash.jpg"
+                    alt="Pohľad na historické mesto Dubrovník a jeho prístav"
+                >
+                <div class="destinacia__obsah">
+                    <h2>Chorvátsko</h2>
+                    <p>Čistá voda, kamenné mestečká a krátka cesta autom. Dovolenka bez stresu.</p>
+                    <a href="#kontakt">Zobraziť zájazd</a>
+                </div>
+            </article>
 
-            <a href="#">Zobraziť zájazd</a>
+            <article class="destinacia">
+                <img
+                    class="destinacia__obrazok"
+                    src="assets/images/robert-lukeman-zNN6ubHmruI-unsplash.jpg"
+                    alt="Vodopád a zelená krajina na Islande pri západe slnka"
+                >
+                <div class="destinacia__obsah">
+                    <h2>Island</h2>
+                    <p>Gejzíry, vodopády a polárna žiara. Pre tých, čo hľadajú dobrodružstvo.</p>
+                    <a href="#kontakt">Zobraziť zájazd</a>
+                </div>
+            </article>
 
-            <h2>Island</h2>
-            
-            <p>Gejzíry, vodopády a polárna žiara. Pre tých, čo hľadajú dobrodružstvo.</p>
-
-            <a href="#">Zobraziť zájazd</a>
-
-            <h2>Thajsko</h2>
-
-            <p>Pláže, chrámy a jedlo, na ktoré nezabudneš. Pohodlne aj s deťmi.</p>
-
-            <a href="#">Zobraziť zájazd</a>
-
+            <article class="destinacia">
+                <img
+                    class="destinacia__obrazok"
+                    src="assets/images/mathew-schwartz-gsllxmVO4HQ-unsplash.jpg"
+                    alt="Zlaté budhistické chrámy v Thajsku"
+                >
+                <div class="destinacia__obsah">
+                    <h2>Thajsko</h2>
+                    <p>Pláže, chrámy a jedlo, na ktoré nezabudneš. Pohodlne aj s deťmi.</p>
+                    <a href="#kontakt">Zobraziť zájazd</a>
+                </div>
+            </article>
         </section>
-
     </main>
 
-    <footer>
-        Kam pôjdeme?
-        Napíš nám
+    <footer class="paticka" id="kontakt">
+        <h2>Kam pôjdeme?</h2>
+        <a class="tlacidlo paticka__tlacidlo" href="mailto:cesty@svetobeznik.sk">Napíš nám</a>
 
-        Adresa
-        Námestie 3, Košice
+        <div class="paticka__informacie">
+            <section>
+                <h3>Adresa</h3>
+                <p>Námestie 3, Košice</p>
+            </section>
+            <section>
+                <h3>Kontakt</h3>
+                <p><a href="mailto:cesty@svetobeznik.sk">cesty@svetobeznik.sk</a></p>
+            </section>
+            <section>
+                <h3>Sledujte nás</h3>
+                <p>Facebook · YouTube</p>
+            </section>
+        </div>
 
-        Kontakt
-        cesty@svetobeznik.sk
-
-        Sledujte nás
-
-        Facebook |
-        YouTube
-        © 2026 Cestovka Svetobežník
+        <small>© 2026 Cestovka Svetobežník</small>
     </footer>
-
 </body>
-
 </html>

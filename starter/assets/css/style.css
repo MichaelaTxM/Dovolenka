@@ -1,23 +1,275 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap');
 
 :root {
     --ocean: #087e78;
     --hlbka: #123b3a;
     --piesok: #f3faf7;
     --koral: #f5b544;
-    --biela: hsla(0, 0%, 100%, 0.78)
+    --biela-priesvit: hsla(0, 0%, 100%, 0.78);
 }
 
-header {
-    background-color: var(--biela)
+* {
+    box-sizing: border-box;
 }
 
-.Logo {
-    font-family: 'Merriweather', sans-serif;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--piesok);
     color: var(--hlbka);
+    font-family: 'Merriweather', serif;
+    font-size: 0.9rem;
+    line-height: 1.7;
 }
 
-h2{
+h1,
+h2,
+h3,
+.hlavicka__logo {
+    font-family: 'Poppins', sans-serif;
+}
+
+.hlavicka {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem 1rem;
+    padding: 0.75rem 5%;
+    background: #fff;
+}
+
+.hlavicka__logo {
+    color: var(--ocean);
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.navigacia {
+    order: 3;
+    width: 100%;
+}
+
+.navigacia__zoznam {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigacia a,
+.paticka a:not(.tlacidlo) {
+    color: inherit;
+    text-decoration: none;
+}
+
+.tlacidlo {
+    display: inline-block;
+    padding: 0.55rem 1.1rem;
+    border-radius: 0.75rem;
+    background: var(--koral);
     color: var(--hlbka);
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.tlacidlo:hover {
+    transform: translateY(-0.1rem);
+    background: #ffc65d;
+}
+
+.navigacia a:hover,
+.destinacia__obsah a:hover,
+.paticka a:not(.tlacidlo):hover {
+    color: var(--ocean);
+}
+
+.uvod {
+    display: grid;
+    min-height: 20rem;
+    padding: 3rem 5%;
+    place-items: center;
+    background: linear-gradient(145deg, var(--ocean), var(--hlbka));
+    color: #fff;
+    text-align: center;
+}
+
+.uvod__obsah {
+    max-width: 35rem;
+}
+
+.uvod h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(2rem, 6vw, 3rem);
+    line-height: 1.2;
+}
+
+.uvod p {
+    margin: 0;
+    color: var(--biela-priesvit);
+}
+
+.statistiky {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem 5%;
+    background: var(--ocean);
+    color: #fff;
+    text-align: center;
+}
+
+.statistiky__polozka {
+    display: flex;
+    flex-direction: column;
+}
+
+.statistiky strong {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.3;
+}
+
+.destinacie {
+    display: grid;
+    gap: 1.25rem;
+    padding: 3rem 5%;
+}
+
+.destinacia {
+    overflow: hidden;
+    border-radius: 0.75rem;
+    background: #fff;
+}
+
+.destinacia__obrazok {
+    display: block;
+    width: 100%;
+    height: 13rem;
+    object-fit: cover;
+}
+
+.destinacia__obsah {
+    padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.destinacia h2 {
+    margin: 0 0 0.7rem;
+    font-size: 1.8rem;
+    line-height: 1.3;
+}
+
+.destinacia p {
+    margin: 0 0 0.75rem;
+}
+
+.destinacia__obsah a {
+    color: var(--ocean);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.paticka {
+    padding: 2rem 5% 1.25rem;
+    background: var(--hlbka);
+    color: #fff;
+}
+
+.paticka > h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.8rem;
+}
+
+.paticka__tlacidlo {
+    margin-bottom: 1rem;
+}
+
+.paticka__informacie {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0.5rem 0 1rem;
+}
+
+.paticka__informacie h3 {
+    margin: 0 0 0.5rem;
+    color: var(--koral);
+    font-size: 1rem;
+}
+
+.paticka__informacie p {
+    margin: 0;
+}
+
+.paticka small {
+    font-size: 0.75rem;
+}
+
+@media (min-width: 37.5em) {
+    .hlavicka {
+        flex-wrap: nowrap;
+    }
+
+    .navigacia {
+        order: 0;
+        width: auto;
+        margin-left: auto;
+    }
+
+    .navigacia__zoznam {
+        gap: 1.5rem;
+    }
+
+    .statistiky {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .paticka__informacie {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (min-width: 56.25em) {
+    .uvod {
+        min-height: 21.7rem;
+    }
+
+    .destinacie {
+        width: 84%;
+        max-width: 56rem;
+        gap: 1.4rem;
+        margin: 0 auto;
+        padding: 3.6rem 0;
+    }
+
+    .destinacia {
+        display: flex;
+        min-height: 11.1rem;
+    }
+
+    .destinacia:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .destinacia__obrazok {
+        flex: 0 0 45%;
+        width: 45%;
+        height: 11.1rem;
+    }
+
+    .destinacia__obsah {
+        align-self: center;
+        padding: 1.5rem 2rem;
+    }
+
+    .paticka__informacie {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
 }
